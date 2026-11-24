@@ -55,7 +55,7 @@ The same `SKILL.md`, unchanged, was installed in OpenAI Codex on another compute
 
 - **Result:** the generated `Vin_fun.m` was identical, line for line, to the one from the Claude Code clean-install run. Against the example, the maximum relative difference at 5 random points was 5e-16, and both give v_in = 9.94 V at the physical operating point.
 - **Behaviour:** Codex checked the document, asked the design questions separately (each with a recommendation), and did not derive anything before the answers came. Without being asked, it also added extra analyses: the region where ω > 0 holds, the singularities, and 30 equivalence tests. The run therefore took longer than in Claude Code.
-- **Setup notes:** Codex could not reach MATLAB until `shareMATLABSession()` was run in MATLAB. It did not find the MathWorks `matlab-use-symbolic-math` skill; the result was correct without it.
+- **Setup notes:** Codex could not reach MATLAB until `shareMATLABSession()` was run in MATLAB. At first it did not find the MathWorks `matlab-use-symbolic-math` skill, because the math-and-optimization skill group had not been selected during the toolkit installation; the result was correct without it. Rerunning `setupAgenticToolkit("install")` with that group selected fixed it.
 
 ## What changed after testing
 

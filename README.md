@@ -44,7 +44,9 @@ Scope: backstepping-type derivations, including adaptive backstepping with tunin
 
 ## Install
 
-Copy `skill/SKILL.md` to your Claude Code skills folder:
+The skill is the folder `backstepping-word-eq-to-matlab/` (it contains only `SKILL.md`). It works in both Claude Code and OpenAI Codex without changes.
+
+**Claude Code:** copy the folder to your Claude Code skills folder:
 
 ```
 ~/.claude/skills/backstepping-word-eq-to-matlab/SKILL.md          (macOS / Linux)
@@ -53,7 +55,16 @@ C:\Users\<you>\.claude\skills\backstepping-word-eq-to-matlab\SKILL.md   (Windows
 
 Restart Claude Code.
 
-**OpenAI Codex:** the same `SKILL.md` works without changes. Install the MATLAB Agentic Toolkit with Codex selected as the agent, then copy the skill folder to `~/.agents/skills/backstepping-word-eq-to-matlab/SKILL.md` (Windows: `C:\Users\<you>\.agents\skills\...`) and restart Codex. Call it with `$backstepping-word-eq-to-matlab`. Not yet tested in Codex.
+**OpenAI Codex:** install the MATLAB Agentic Toolkit with Codex selected as the agent, then copy the folder to the Codex skills folder:
+
+```
+~/.agents/skills/backstepping-word-eq-to-matlab/SKILL.md          (macOS / Linux)
+C:\Users\<you>\.agents\skills\backstepping-word-eq-to-matlab\SKILL.md   (Windows)
+```
+
+Restart Codex and check with `/skills`. Call it with `$backstepping-word-eq-to-matlab`.
+
+**If the agent cannot connect to MATLAB**, run `shareMATLABSession()` in the MATLAB Command Window and restart the agent.
 
 ## Use
 
@@ -96,7 +107,7 @@ Each example folder has its own README with the questions Claude asked, the answ
 
 ## Testing
 
-The skill was tested on 14 documents. The 3 hardest were then run twice more each to check repeatability. Finally, the skill was installed from this repository under a different Claude account and run on example 01; the result matched. Every result was verified independently: against the author's code, by an independent derivation, or by recomputing V̇ along the true dynamics. See [TESTING.md](TESTING.md).
+The skill was tested on 14 documents. The 3 hardest were then run twice more each to check repeatability. Finally, the skill was installed from this repository under a different Claude account, and in OpenAI Codex on another computer, and run on example 01; both results matched. Every result was verified independently: against the author's code, by an independent derivation, or by recomputing V̇ along the true dynamics. See [TESTING.md](TESTING.md).
 
 ## Limitations
 

@@ -49,6 +49,14 @@ Only the form differed between runs: file names, input order, and the length of 
 
 The skill was downloaded from this repository and installed as described in the README, under a different Claude account, with all earlier copies of the skill removed. Run on `examples/01_backstepping_pump/input_document.docx`, it produced a `Vin_fun.m` identical to the one in the example: the difference at 5 random points was ≤ 8e-16, and both give v_in = 9.94 V at a physical operating point. Because the example matches the author's reference solution, the fresh run does too.
 
+## OpenAI Codex
+
+The same `SKILL.md`, unchanged, was installed in OpenAI Codex on another computer (MATLAB Agentic Toolkit installed for Codex, skill copied to `~/.agents/skills/`) and run on `examples/01_backstepping_pump/input_document.docx`.
+
+- **Result:** the generated `Vin_fun.m` was identical, line for line, to the one from the Claude Code clean-install run. Against the example, the maximum relative difference at 5 random points was 5e-16, and both give v_in = 9.94 V at the physical operating point.
+- **Behaviour:** Codex checked the document, asked the design questions separately (each with a recommendation), and did not derive anything before the answers came. Without being asked, it also added extra analyses: the region where ω > 0 holds, the singularities, and 30 equivalence tests. The run therefore took longer than in Claude Code.
+- **Setup notes:** Codex could not reach MATLAB until `shareMATLABSession()` was run in MATLAB. It did not find the MathWorks `matlab-use-symbolic-math` skill; the result was correct without it.
+
 ## What changed after testing
 
 Rules added to the skill from the trials:

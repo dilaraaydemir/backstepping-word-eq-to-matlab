@@ -53,6 +53,8 @@ C:\Users\<you>\.claude\skills\backstepping-word-eq-to-matlab\SKILL.md   (Windows
 
 Restart Claude Code.
 
+**OpenAI Codex:** the same `SKILL.md` works without changes. Install the MATLAB Agentic Toolkit with Codex selected as the agent, then copy the skill folder to `~/.agents/skills/backstepping-word-eq-to-matlab/SKILL.md` (Windows: `C:\Users\<you>\.agents\skills\...`) and restart Codex. Call it with `$backstepping-word-eq-to-matlab`. Not yet tested in Codex.
+
 ## Use
 
 Open Claude Code in a folder that contains the Word document and call the skill by name. Automatic skill loading is not reliable, so naming it is safer:

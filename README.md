@@ -1,4 +1,4 @@
-# word-equations-to-matlab
+# backstepping-word-eq-to-matlab
 
 A Claude Code skill that turns a hand-written control derivation in Word into verified MATLAB code.
 
@@ -47,8 +47,8 @@ Scope: backstepping-type derivations, including adaptive backstepping with tunin
 Copy `skill/SKILL.md` to your Claude Code skills folder:
 
 ```
-~/.claude/skills/word-equations-to-matlab/SKILL.md          (macOS / Linux)
-C:\Users\<you>\.claude\skills\word-equations-to-matlab\SKILL.md   (Windows)
+~/.claude/skills/backstepping-word-eq-to-matlab/SKILL.md          (macOS / Linux)
+C:\Users\<you>\.claude\skills\backstepping-word-eq-to-matlab\SKILL.md   (Windows)
 ```
 
 Restart Claude Code.
@@ -58,7 +58,7 @@ Restart Claude Code.
 Open Claude Code in a folder that contains the Word document and call the skill by name. Automatic skill loading is not reliable, so naming it is safer:
 
 ```
-/word-equations-to-matlab  Derive the control law in input_document.docx
+/backstepping-word-eq-to-matlab  Derive the control law in input_document.docx
 ```
 
 The work happens in two phases:

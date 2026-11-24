@@ -1,5 +1,5 @@
 ---
-name: word-equations-to-matlab
+name: backstepping-word-eq-to-matlab
 description: Take a Word (.docx) control-design document in which the author has solved the easy parts by hand and then listed the remaining steps in words (e.g. "Choose V", "Solve for x2_ref and u", "Take derivative", "Subs f and g"). Check the solved part for errors, then carry out the listed steps symbolically in MATLAB, in the author's MATLAB code style, verify every step with closed-loop Lyapunov checks, handle 0/0 during simplification, and deliver the final control law (e.g. Vin) for Simulink. Use for backstepping-type derivations, including adaptive backstepping, from the control systems workstation.
 ---
 
